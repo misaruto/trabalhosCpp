@@ -29,8 +29,8 @@ int main(int argc, char** argv) {
 		cin >> opt;
 		switch(opt){
 			case 1:
-			prod.cadastraProdutos();
-			listaProdutos.shiftEnd(prod);
+                        listaProdutos.shiftEnd();
+                        
 			break;
 			case 2:
 			listaProdutos.shiftFront();

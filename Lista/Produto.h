@@ -13,6 +13,9 @@
 
 #ifndef PRODUTO_H
 #define PRODUTO_H
+#include <string>
+using std::string;
+using std::getline;
 class Produto {
 public:
 	int getCodigo();
@@ -21,7 +24,7 @@ public:
 	int getEstoque();
 
 	void setCodigo(int nome);
-	void setNome(char * nome);
+	void setNome(string nome);
 	void setPreco(float preco);
 	void setEstoque(int estoque);
 
@@ -32,7 +35,7 @@ public:
     virtual ~Produto();
 private:
 	int codigo;
-	char *nome;
+	string nome;
 	float preco;
 	int estoque;
 };

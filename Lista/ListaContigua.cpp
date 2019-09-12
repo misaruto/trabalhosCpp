@@ -22,15 +22,16 @@ ListaContigua::ListaContigua() {
 	lista = new Produto [tamanho];
 
 }
-void ListaContigua::shiftEnd(const Produto& prod){
+void ListaContigua::shiftEnd(){
+    Produto prod =  Produto();
 	if (this->tamanho <= this->quantidade){
 		cout << "Lista cheia" << endl;
 	}
 	else{
-		
+		prod.cadastraProdutos();
 		int i = 0;
 		if (this->quantidade == 0)
-		{
+		{   
 			this->lista[0].copiaProduto(prod);
 		}
 		else{
@@ -41,7 +42,6 @@ void ListaContigua::shiftEnd(const Produto& prod){
 			this->lista[0].copiaProduto(prod);
 		}
 		this->quantidade = this->quantidade +1;
-		cout << this->quantidade << " aa" << this->tamanho;
 	}
 }
 void ListaContigua::shiftFront(){
@@ -60,10 +60,10 @@ void ListaContigua::imprimeProdutos(){
 	int i=0;
 	for (i = 0; i < this->quantidade; ++i)
 	{
-		cout << "Codigo: "<< this->lista[i].getCodigo()<< endl;
+		cout << endl  << "Codigo: "<< this->lista[i].getCodigo()<< endl;
 		cout << "Nome: "<< this->lista[i].getNome()<< endl;
 		cout << "Preço: "<< this->lista[i].getPreco()<< endl;
-		cout << "Estoque: "<< this->lista[i].getEstoque()<< endl;
+		cout << "Estoque: "<< this->lista[i].getEstoque()<< endl << endl;
 
 	}
 

@@ -19,7 +19,7 @@ class ListaContigua {
 public:
     ListaContigua();
     
-    void shiftEnd(const Produto& prod);
+    void shiftEnd();
     void shiftFront();
     void imprimeProdutos();
 
